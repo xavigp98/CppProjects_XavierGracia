@@ -68,10 +68,35 @@ int main() {
 	Enemy arr[5];
 	for (int i = 0; i < 5; i++) {
 		arr[i] = CreateRandomEnemy();
+	}
+
+	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < 5; j++) {
 			if (arr[i] == arr[j]) {
-				arr[i].type = (EnemyType)((((int)arr[i].type + 1) % 4));
+				arr[j].type = (EnemyType)((((int)arr[j].type + 1) % 4));
 			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++) {
+		cout << "Nombre: " << arr[i].name << ". Tipo: ";
+
+		switch (arr[i].type)
+		{
+		case(0):
+			cout << "zombie" << endl;
+			break;
+		case(1):
+			cout << "vampire" << endl;
+			break;
+		case(2):
+			cout << "ghost" << endl;
+			break;
+		case(3):
+			cout << "witch" << endl;
+			break;
+		default:
+			break;
 		}
 	}
 	return 0;
