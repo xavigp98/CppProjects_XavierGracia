@@ -4,9 +4,9 @@
 
 using namespace std;
 
-enum EnemyType { zombie, vampire, ghost, witch };
+enum EnemyType { zombie, vampire, ghost, witch};
 
-string nombres[5] = { "joan", "xaviO", "xaviG", "loko", "lamierda" };
+string nombres[5]{ "Hipolito", "Fulgencia", "Pancracia", "Eustaquio", "Joan" };
 
 struct Enemy {
 	EnemyType type;
@@ -14,11 +14,20 @@ struct Enemy {
 	int health;
 };
 
+bool operator==(Enemy uno, Enemy dos) {
+	if (uno.name == dos.name && uno.type == dos.type)
+		return true;
+	else
+		return false;
+}
+
 Enemy CreateRandomEnemy() {
 	Enemy enemigo;
 	enemigo.type;
 	enemigo.name;
 	enemigo.health;
+
+	
 
 	int a = rand() % 4;
 
@@ -26,19 +35,30 @@ Enemy CreateRandomEnemy() {
 	{
 	case (0):
 		enemigo.type = zombie;
+		break;
 	case(1):
 		enemigo.type = vampire;
+		break;
 	case(2):
 		enemigo.type = ghost;
+		break;
 	case(3):
 		enemigo.type = witch;
+		break;
 	case(4):
 		enemigo.type = witch;
+		break;
 	default:
 		break;
 	}
 
+	int b = rand() % 5;
 
+	enemigo.name = nombres[b];
+
+	enemigo.health = rand() % 100;
+
+	return enemigo;
 }
 
 
@@ -46,5 +66,13 @@ int main() {
 
 	srand(time(NULL));
 	Enemy arr[5];
+	for (int i = 0; i < 5; i++) {
+		arr[i] = CreateRandomEnemy();
+		for (int j = 0; j < 5; j++) {
+			if (arr[i] == arr[j]) {
+				arr[i].type = (EnemyType)((((int)arr[i].type + 1) % 4));
+			}
+		}
+	}
 	return 0;
 }
