@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum EnemyType { zombie, vampire, ghost, witch};
+enum class EnemyType { zombie, vampire, ghost, witch};
 
 string nombres[5]{ "Hipolito", "Fulgencia", "Pancracia", "Eustaquio", "Joan" };
 
@@ -34,19 +34,16 @@ Enemy CreateRandomEnemy() {
 	switch (a)
 	{
 	case (0):
-		enemigo.type = zombie;
+		enemigo.type = EnemyType::zombie;
 		break;
 	case(1):
-		enemigo.type = vampire;
+		enemigo.type = EnemyType::vampire;
 		break;
 	case(2):
-		enemigo.type = ghost;
+		enemigo.type = EnemyType::ghost;
 		break;
 	case(3):
-		enemigo.type = witch;
-		break;
-	case(4):
-		enemigo.type = witch;
+		enemigo.type = EnemyType::witch;
 		break;
 	default:
 		break;
@@ -83,16 +80,16 @@ int main() {
 
 		switch (arr[i].type)
 		{
-		case(0):
+		case(EnemyType::zombie):
 			cout << "zombie" << endl;
 			break;
-		case(1):
+		case(EnemyType::vampire):
 			cout << "vampire" << endl;
 			break;
-		case(2):
+		case(EnemyType::ghost):
 			cout << "ghost" << endl;
 			break;
-		case(3):
+		case(EnemyType::witch):
 			cout << "witch" << endl;
 			break;
 		default:
