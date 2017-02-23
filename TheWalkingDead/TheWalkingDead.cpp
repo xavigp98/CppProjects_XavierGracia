@@ -14,7 +14,7 @@ public:
 	float precision;
 	int life;
 	Weapon weapon;
-	Player::Player() : weapon { (Weapon)(rand() % (int)Weapon::MAX) }, precision { 0.f+(((float)(rand() % 10)/10)) }, life{ rand() % 100 }{	
+	Player::Player() : weapon { static_cast<Weapon>(rand() % static_cast<int>(Weapon::MAX) )}, precision { 0.f+((static_cast<float>(rand() % 10)/10)) }, life{ rand() % 100 }{	
 			
 	}
 
@@ -30,7 +30,7 @@ public:
 	float speed;
 	float damage;
 	int life;
-	Zombie::Zombie() :distanceToPlayer{ 20 + (rand() % 180) }, speed{ (float)(rand() % 20) + (((float)(rand() % 10) / 10)) }, damage{ (float)(rand() % 20) + (((float)(rand() % 10) / 10)) }, life{ rand() % 100 }
+	Zombie::Zombie() :distanceToPlayer{ 20 + (rand() % 180) }, speed{ static_cast<float>(rand() % 20) + ((static_cast<float>(rand() % 10) / 10)) }, damage{ static_cast<float>(rand() % 20) + ((static_cast<float>(rand() % 10) / 10)) }, life{ rand() % 100 }
 	{
 		
 	}
@@ -49,7 +49,7 @@ public:
 	}
 };
 void Player::attack(Zombie &a) {
-	a.life = a.life - (int)(Player::weapon) * Player::precision;
+	a.life = a.life - static_cast<int>(Player::weapon) * Player::precision;
 }
 
 
