@@ -6,8 +6,6 @@
 
 enum class EnemyType { zombie, vampire, ghost, witch, max}; //Fuertemente tipado
 
-
-
 struct Enemy {
 	EnemyType type;
 	std::string name; //siempre que usemos cout, cin, string mejor usar std:: que poner el using namespace std; al principio
@@ -49,7 +47,6 @@ Enemy CreateRandomEnemy() {
 		rand() % MAX_LIFE
 	};
 }
-
 
 int main() {
 
