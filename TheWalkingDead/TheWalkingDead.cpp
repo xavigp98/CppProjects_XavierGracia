@@ -6,15 +6,14 @@ class Zombie;
 
 enum class Weapon {FISTS,GUN,SHOTGUN,REVOLVER,SNIPER,MACHINE_GUN,MAX};
 
-
-
 class Player {
 public:
 
 	float precision;
 	int life;
 	Weapon weapon;
-	Player::Player() : weapon { static_cast<Weapon>(rand() % static_cast<int>(Weapon::MAX) )}, precision { 0.f+((static_cast<float>(rand() % 10)/10)) }, life{ rand() % 100 }{	
+
+	Player() : weapon { static_cast<Weapon>(rand() % static_cast<int>(Weapon::MAX) )}, precision { ((static_cast<float>(rand() % 10)/10.0f)) }, life{ 100 }{	
 			
 	}
 
@@ -37,7 +36,7 @@ public:
 
 	void attack(Player &b) {
 		if (distanceToPlayer <= 0) {
-			b.life -= damage;
+			b.life -= static_cast<int>(damage);
 		}
 		else {
 			distanceToPlayer = distanceToPlayer - 1;
@@ -48,6 +47,7 @@ public:
 		return life > 0;
 	}
 };
+
 void Player::attack(Zombie &a) {
 	a.life = a.life - static_cast<int>(Player::weapon) * Player::precision;
 }
@@ -74,7 +74,7 @@ int main() {
 		case Weapon::SNIPER:	std::cout << "Sniper";break;
 		}
 		std::cout << ", precision: " << player.precision << std::endl;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < NUMERO_ZOMBIES; i++) {
 			if (zombies[i].isAlive() == true) {
 				zombiesAreAlive = true;
 				player.attack(zombies[i]);
@@ -85,7 +85,7 @@ int main() {
 
 		std::cout << std::endl << std::endl;
 		
-	} while (player.isAlive() == true && zombiesAreAlive);
+	} while (player.isAlive()  && zombiesAreAlive);
 
 	if (zombiesAreAlive)
 		std::cout << "Los zombies han ganado" << std::endl << std::endl;
