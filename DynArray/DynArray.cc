@@ -41,6 +41,7 @@ bool operator==(const DynArray& lhs, const DynArray& rhs) {
 			i++;
 		}
 	}
+	return true;
 }
 
 int* DynArray::begin() const {
