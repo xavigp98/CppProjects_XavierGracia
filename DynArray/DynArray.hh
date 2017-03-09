@@ -38,10 +38,10 @@ public:
 
 	// modifiers methods
 	//void assign (size_t n, const int& val);								// assigns and replaces the current contents modifying its size accordingly
-	//void push	(const int &val);										// adds a new element at the end of the array, after its current last element
-	//void pop	(void);													// removes the last element effectively reducing the array size by one
+	void push	(const int &val);										// adds a new element at the end of the array, after its current last element
+	void pop	(void);													// removes the last element effectively reducing the array size by one
 	//void insert	(size_t position, const int &val);						// a new element is inserted before the element at the specified position
-	//void erase	(size_t position);										// removes from the array a single element
+	void erase	(size_t position);										// removes from the array a single element
 	//void erase	(size_t first, size_t last);							// removes from the array a range of elements
 	//void swap	(DynArray &x);											// exchanges the content of the array by the content of x
 	//void clear	(void);													// removes all elements from the array leaving it with a size of 0
