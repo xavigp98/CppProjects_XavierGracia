@@ -4,7 +4,7 @@
 
 struct persona
 {
-	std::string nom;
+	std::string nombre;
 	int dia;
 	int mes;
 	int año;
