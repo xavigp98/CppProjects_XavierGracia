@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlayerRanking", "PlayerRank
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "A08", "A08\A08.vcxproj", "{25B16FD4-431B-46E6-B69B-5387B51FF271}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alchemy", "Alchemy\Alchemy.vcxproj", "{4C3A873E-6722-45E7-AE22-A4C040226636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{25B16FD4-431B-46E6-B69B-5387B51FF271}.Release|x64.Build.0 = Release|x64
 		{25B16FD4-431B-46E6-B69B-5387B51FF271}.Release|x86.ActiveCfg = Release|Win32
 		{25B16FD4-431B-46E6-B69B-5387B51FF271}.Release|x86.Build.0 = Release|Win32
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Debug|x64.ActiveCfg = Debug|x64
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Debug|x64.Build.0 = Debug|x64
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Debug|x86.ActiveCfg = Debug|Win32
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Debug|x86.Build.0 = Debug|Win32
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Release|x64.ActiveCfg = Release|x64
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Release|x64.Build.0 = Release|x64
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Release|x86.ActiveCfg = Release|Win32
+		{4C3A873E-6722-45E7-AE22-A4C040226636}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
