@@ -18,5 +18,13 @@
     <ClCompile Include="A10_Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="myList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
