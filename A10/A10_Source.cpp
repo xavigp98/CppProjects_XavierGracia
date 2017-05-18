@@ -3,6 +3,8 @@
 #include <set>
 #include <unordered_set>
 #include <iostream>
+#include "myList.h"
+
 
 std::list<int> superMerge(std::list<int> uno, std::list<int> dos) {
 	std::deque<int> mezcla(uno.begin(), uno.end());
@@ -120,7 +122,7 @@ bool palindrome(std::list<int> in) {
 }
 
 int main() {
-
+	/*
 	//a
 	std::list<int> a1({ 4,3,2,1,0 });
 	std::list<int> a2({ 5,3,1,0 });
@@ -151,5 +153,13 @@ int main() {
 	std::list<int> f1({ 1,2,3,2,1 });
 
 	bool fResultado = palindrome(f1);
+	*/
+	//myList
+	myList a1;
+
+	a1.push_back(3);
+	
+	a1.pop_back();
+	
 	return 0;
 }
